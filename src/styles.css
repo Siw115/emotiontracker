@@ -1,0 +1,98 @@
+@import 'components/SignUp/SignUp.module.css';
+@import "components/SignIn/SignIn.module.css";
+@import "components/SignOut/SignOut.module.css";
+@import "components/EmotionInput/EmotionInput.module.css";
+@import "components/EmotionInsights/EmotionInsights.module.css";
+@import "components/Profile/Profile.module.css";
+@import "components/Clients/Clients.module.css";
+
+/* Define root-level variables for light and dark themes */
+:root {
+    --background-color: #e0f7fa;
+    --text-color: #333333;
+    --content-bg-color: #f5f5f5;
+    --button-bg-color: #004d40;
+    --button-text-color: #ffffff;
+    --input-bg-color: #ffffff;
+    --input-text-color: #333333;
+    --border-color: #ccc;
+}
+
+[data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --content-bg-color: #1e1e1e;
+    --button-bg-color: #333333;
+    --button-text-color: #e0f7fa;
+    --input-bg-color: #2c2c2c;
+    --input-text-color: #ffffff;
+    --border-color: #444;
+}
+
+/* Apply these variables across your application */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.appContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.mainContent {
+    flex: 1;
+    background-color: var(--content-bg-color);
+    padding: 20px;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button styles */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 2px solid var(--button-bg-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-bg-color);
+}
+
+/* Input Fields Styling */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea,
+select {
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* General container styling */
+.container {
+    background-color: var(--content-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}

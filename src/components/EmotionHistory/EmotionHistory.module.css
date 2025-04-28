@@ -1,0 +1,136 @@
+:root {
+    --background-color: #e0f7fa;
+    --text-color: #00796b;
+    --container-bg: #ffffff;
+    --item-bg: #ffffff;
+    --item-border: #004d40;
+    --icon-color: #ffab40;
+    --skeleton-bg: #e0e0e0;
+    --skeleton-element-bg: #cfcfcf;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+    --background-color: #181818;
+    --text-color: #b2ebf2;
+    --container-bg: #242424;
+    --item-bg: #2c2c2c;
+    --item-border: #607d8b;
+    --icon-color: #ffab40;
+    --skeleton-bg: #3a3a3a;
+    --skeleton-element-bg: #4a4a4a;
+    --box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.historyContainer {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px var(--box-shadow);
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.historyContainer h2 {
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historyList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.historyItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: var(--item-bg);
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.emotionIcon {
+    font-size: 1.8rem;
+    color: var(--icon-color);
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.emotion {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    flex-grow: 1;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background-color: var(--item-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--item-border);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Skeleton styles */
+.skeleton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: var(--skeleton-bg);
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+.skeletonIcon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--skeleton-element-bg);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.skeletonText {
+    width: 100px;
+    height: 18px;
+    background-color: var(--skeleton-element-bg);
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-left: 15px;
+    transition: background-color 0.3s;
+}
+
+.skeletonDate {
+    width: 60px;
+    height: 18px;
+    background-color: var(--skeleton-element-bg);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}

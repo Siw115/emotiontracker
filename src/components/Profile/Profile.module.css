@@ -1,0 +1,173 @@
+/* src/components/Profile/Profile.module.css */
+
+:root {
+    --background-color: #f7f9fc;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --button-bg: rgba(137, 156, 176, 0.73);
+    --button-hover-bg: #6685ad;
+    --input-bg: #ffffff;
+    --input-border: #ddd;
+    --input-focus-border: #0056b3;
+    --feedback-bg: #285944;
+    --feedback-text: #0f5132;
+    --toggle-button-bg: #6c757d;
+    --toggle-button-hover-bg: #5a6268;
+    --profile-section-bg: #ffffff;
+    --read-only-bg: #e9ecef;
+}
+
+[data-theme='dark'] {
+    --background-color: #181818;
+    --text-color: #e0f7fa;
+    --container-bg: #242424;
+    --button-bg: #37474f;
+    --button-hover-bg: #455a64;
+    --input-bg: #333333;
+    --input-border: #607d8b;
+    --input-focus-border: #80cbc4;
+    --feedback-bg: #444;
+    --feedback-text: #ffffff;
+    --toggle-button-bg: #455a64;
+    --toggle-button-hover-bg: #607d8b;
+    --profile-section-bg: #2c2c2c;
+    --read-only-bg: #3a3a3a;
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--container-bg);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial, sans-serif', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.feedbackPopup {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--feedback-bg);
+    color: var(--feedback-text);
+    border: 1px solid var(--feedback-bg);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.profileContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profileSection {
+    flex: 1 1 calc(50% - 20px);
+    background-color: var(--profile-section-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+h3 {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.profileField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.profileField label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.inputField, .textArea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    font-size: 1em;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.inputField:focus, .textArea:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+    outline: none;
+}
+
+.textArea {
+    height: 80px;
+    resize: none;
+}
+
+.saveProfileButton, .togglePasswordButton {
+    background-color: var(--button-bg);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.saveProfileButton:hover, .togglePasswordButton:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.saveProfileButton:disabled {
+    background-color: #b3c7e6;
+    cursor: not-allowed;
+}
+
+.togglePasswordButton {
+    background-color: var(--toggle-button-bg);
+}
+
+.togglePasswordButton:hover {
+    background-color: var(--toggle-button-hover-bg);
+}
+
+.readOnlyField {
+    background-color: var(--read-only-bg);
+}
+
+@media screen and (max-width: 768px) {
+    .profileContainer {
+        flex-direction: column;
+    }
+
+    .profileSection {
+        flex: 1 1 100%;
+    }
+}
+
+button {
+    margin-left: 2px;
+}

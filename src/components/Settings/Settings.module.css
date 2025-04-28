@@ -1,0 +1,135 @@
+:root {
+    --background-color: #f5f9fc;
+    --text-color: #333333;
+    --container-bg: #ffffff;
+    --button-bg: #7d9598;
+    --button-hover-bg: #b2ebf2;
+    --border-color: #00796b;
+    --feedback-bg: #444444;
+}
+
+[data-theme='dark'] {
+    --background-color: #181818;
+    --text-color: #f5f5f5;
+    --container-bg: #242424;
+    --button-bg: #37474f;
+    --button-hover-bg: #455a64;
+    --border-color: #888888;
+    --feedback-bg: #555555;
+}
+
+.settingsContainer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.sectionHeader {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.settingsOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkboxField, .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectField, .toggleThemeButton {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggleThemeButton:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.feedbackPopup {
+    background-color: var(--feedback-bg);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.saveButtonContainer {
+    text-align: center;
+}
+
+.saveSettingsButton {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #388e3c;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saveSettingsButton:hover {
+    background-color: #2e7d32;
+}
+
+.feedbackInput {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+
+.submitFeedbackButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitFeedbackButton:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.feedbackMessage {
+    margin-top: 8px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}

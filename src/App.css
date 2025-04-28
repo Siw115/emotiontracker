@@ -1,0 +1,98 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.appContainer {
+  display: flex;
+  flex: 1;
+}
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height for vertical centering */
+  width: 100%;
+}
+
+
+.sidebar {
+  width: 250px;
+  background-color: #004d40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 40px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.switchAuthButton {
+  font-size: 1rem;
+  padding: 12px 24px;
+  margin-top: 20px;
+  color: #004d40;
+  background-color: #e0f7fa;
+  border: 2px solid #004d40;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.switchAuthButton:hover {
+  background-color: #004d40;
+  color: #ffffff;
+  border-color: #004d40;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .appContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 2px solid #004d40;
+  }
+
+  .mainContent {
+    width: 100%;
+    padding: 20px;
+    align-items: flex-start;
+  }
+}

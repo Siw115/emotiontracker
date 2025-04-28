@@ -1,0 +1,253 @@
+:root {
+    --background-color: #f5f9fc;
+    --text-color: #004d40;
+    --container-bg: #ffffff;
+    --button-bg: #e0f7fa;
+    --button-hover-bg: #b2dfdb;
+    --border-color: #00796b;
+    --feedback-bg: #333;
+    --tip-bg: #ffffff;
+    --tip-hover-bg: #e0f7fa;
+    --note-bg: #e0f7fa;
+    --note-text: #004d40;
+}
+
+[data-theme='dark'] {
+    --background-color: #181818;
+    --text-color: #e0f7fa;
+    --container-bg: #242424;
+    --button-bg: #37474f;
+    --button-hover-bg: #455a64;
+    --border-color: #607d8b;
+    --feedback-bg: #333;
+    --tip-bg: #2c2c2c;
+    --tip-hover-bg: #444;
+    --note-bg: #2c2c2c;
+    --note-text: #e0f7fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--container-bg);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.notesContainer h3{
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guidance {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.loggedEmotion {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.deleteButton, .saveNotesButton, .deleteNotesButton {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    background-color: var(--button-bg);
+}
+
+.deleteButton {
+    background-color: #d32f2f;
+}
+
+.deleteButton:hover {
+    background-color: #b71c1c;
+}
+
+.saveNotesButton {
+    background-color: #388e3c;
+}
+
+.saveNotesButton:hover {
+    background-color: #2e7d32;
+}
+
+.deleteNotesButton {
+    background-color: #fb8c00;
+}
+
+.deleteNotesButton:hover {
+    background-color: #f57c00;
+}
+
+.emotionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.emotionButton {
+    font-size: 1.6rem;
+    padding: 12px;
+    border: 2px solid transparent;
+    background-color: var(--button-bg);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+.emotionButton:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.emotionLabel {
+    font-size: 0.95rem;
+    margin-top: 6px;
+    color: var(--text-color);
+    letter-spacing: 0.3px;
+}
+
+.feedbackPopup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--feedback-bg);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.feedbackText {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.resources, .tips {
+    margin-top: 20px;
+    background-color: var(--button-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resources h3, .tips h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.resources ul, .tips {
+    list-style-type: none;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+}
+
+.resources ul a {
+    color: black;
+}
+
+.resources li, .tip {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 5px;
+}
+
+.resources a {
+    color: #80cbc4;
+    text-decoration: underline;
+}
+
+.resources a:hover {
+    color: var(--text-color);
+}
+
+.tip {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--tip-bg);
+    transition: background-color 0.2s ease, color 0.3s;
+}
+
+.tip:hover {
+    background-color: var(--tip-hover-bg);
+}
+
+.tip strong {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tip p {
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.notesContainer {
+    margin-top: 20px;
+}
+
+.notesTextarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    color: var(--note-text);
+    background-color: var(--note-bg);
+    resize: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.notesTextarea:focus {
+    border-color: var(--border-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+}

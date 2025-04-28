@@ -1,0 +1,171 @@
+:root {
+    --background-color: #f5f9fc;
+    --text-color: #2b3a42;
+    --container-bg: #ffffff;
+    --highlight-color: #2979ff;
+    --box-bg: #e9f1f7;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --chart-box-shadow: rgba(0, 0, 0, 0.05);
+    --chart-box-hover-shadow: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] {
+    --background-color: #181818;
+    --text-color: #e0f7fa;
+    --container-bg: #242424;
+    --highlight-color: #82b1ff;
+    --box-bg: #303030;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --chart-box-shadow: rgba(0, 0, 0, 0.3);
+    --chart-box-hover-shadow: rgba(0, 0, 0, 0.4);
+}
+
+.insightsContainer {
+    max-width: 100%;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    border-radius: 16px;
+    margin: 10px auto;
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.emotionInputContainer h2 {
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: color 0.3s;
+}
+
+.streakInfo, .weeklyComparison, .topEmotions, .tips {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: var(--box-bg);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0px 2px 8px var(--chart-box-shadow);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.topEmotions {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: var(--box-bg);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0px 2px 8px var(--chart-box-shadow);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topEmotions span {
+    display: block;
+    margin-top: 4px;
+}
+
+.chartRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.chartBox {
+    flex: 1 1 30%;
+    min-width: 280px;
+    max-width: 380px;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border-radius: 12px;
+    box-shadow: 0px 3px 12px var(--chart-box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.chartBox:hover {
+    box-shadow: 0px 5px 15px var(--chart-box-hover-shadow);
+}
+
+.chartDescription {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 85%;
+    transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .insightsContainer {
+        margin-top: 20px;
+        padding: 30px 15px;
+    }
+
+    .chartRow {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .chartBox {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .streakInfo, .weeklyComparison, .topEmotions, .tips {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.exportButton {
+    padding: 12px 24px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+.exportButton:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+}
+
+.exportButton:active {
+    transform: scale(0.98);
+}

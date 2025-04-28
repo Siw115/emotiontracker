@@ -1,0 +1,51 @@
+.clients-container {
+    padding: 20px;
+    background-color: #f5f9fc;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clients-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2b3a42;
+    text-align: center;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.emotions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.emotion-card {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease;
+}
+
+.emotion-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.emotion-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.emotion-card strong {
+    color: #1f2937;
+}
